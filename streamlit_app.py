@@ -84,19 +84,19 @@ with st.sidebar:
 if uploaded_file or example_data: 
     with st.status("Running ...", expanded=True) as status:
     
-        st.write("Loading data ...")
+        st.write("Subiendo la data ...")
         time.sleep(sleep_time)
 
-        st.write("Preparing data ...")
+        st.write("Preparando la data ...")
         time.sleep(sleep_time)
         X = df.iloc[:,:-1]
         y = df.iloc[:,-1]
             
-        st.write("Splitting data ...")
+        st.write("Dividiendo la data ...")
         time.sleep(sleep_time)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=(100-parameter_split_size)/100, random_state=parameter_random_state)
     
-        st.write("Model training ...")
+        st.write("Entrenamiento del Modelo ...")
         time.sleep(sleep_time)
 
         if parameter_max_features == 'all':
@@ -114,19 +114,19 @@ if uploaded_file or example_data:
                 oob_score=parameter_oob_score)
         rf.fit(X_train, y_train)
         
-        st.write("Applying model to make predictions ...")
+        st.write("Aplicando el modelo para hacer predicciones ...")
         time.sleep(sleep_time)
         y_train_pred = rf.predict(X_train)
         y_test_pred = rf.predict(X_test)
             
-        st.write("Evaluating performance metrics ...")
+        st.write("Evaluando las métricas ...")
         time.sleep(sleep_time)
         train_mse = mean_squared_error(y_train, y_train_pred)
         train_r2 = r2_score(y_train, y_train_pred)
         test_mse = mean_squared_error(y_test, y_test_pred)
         test_r2 = r2_score(y_test, y_test_pred)
         
-        st.write("Displaying performance metrics ...")
+        st.write("Mostrando las métricas ...")
         time.sleep(sleep_time)
         parameter_criterion_string = ' '.join([x.capitalize() for x in parameter_criterion.split('_')])
         #if 'Mse' in parameter_criterion_string:
