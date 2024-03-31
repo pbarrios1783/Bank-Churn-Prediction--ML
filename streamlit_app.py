@@ -9,22 +9,22 @@ import time
 import zipfile
 
 # Page title
-st.set_page_config(page_title='ML Model Building', page_icon='🤖')
-st.title('🤖 ML Model Building')
+st.set_page_config(page_title='Modelo de Machine Learning', page_icon='🚀')
+st.title('🚀 Modelo de Machine Learning')
 
-with st.expander('About this app'):
-  st.markdown('**What can this app do?**')
-  st.info('This app allow users to build a machine learning (ML) model in an end-to-end workflow. Particularly, this encompasses data upload, data pre-processing, ML model building and post-model analysis.')
+with st.expander('Sobre el App'):
+  st.markdown('**Qué se puede hacer con este App?**')
+  st.info('El app permite usuarios construir un modelo de machine learning con un proceso de principio a fin. Esto incluye subir la data, el pre-proceso de la data, la construcción del modelo y el análisis posterior.')
 
-  st.markdown('**How to use the app?**')
-  st.warning('To engage with the app, go to the sidebar and 1. Select a data set and 2. Adjust the model parameters by adjusting the various slider widgets. As a result, this would initiate the ML model building process, display the model results as well as allowing users to download the generated models and accompanying data.')
+  st.markdown('**Cómo usar este app?**')
+  st.warning('Para utilizar el app, ve al sidebar y 1. Selecciona an set de data y 2. Ajusta los párametros del modelo ajustando los sliders. Como resultado, se iniciará el proceso de construcción del modelo de machine learning, mostrando los resultados, también permite a los usuarios bajar los modelos y la data.')
 
   st.markdown('**Under the hood**')
   st.markdown('Data sets:')
   st.code('''- Drug solubility data set
   ''', language='markdown')
   
-  st.markdown('Libraries used:')
+  st.markdown('Librerias usadas:')
   st.code('''- Pandas for data wrangling
 - Scikit-learn for building a machine learning model
 - Altair for chart creation
